@@ -1,0 +1,9 @@
+Host *
+	ControlMaster auto
+  ControlPath ~/.ssh/%r@%h:%p
+
+Host in4230
+     HostName 2001:700:2:8201::11c6
+     User debian
+     ForwardX11 yes
+     ProxyJump vegarfae@login.uio.no

@@ -1,0 +1,10 @@
+[user]
+	name = vegard
+	email = vegard@faergestad.no
+	signingkey = /home/vegard/.ssh/id_ed25519
+[core]
+	autocrlf = input
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
