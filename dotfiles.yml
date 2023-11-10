@@ -1,0 +1,45 @@
+- name: Install dotfiles with symlinks
+  hosts: localhost
+  vars:
+    dotfiles_dir: "~/.dotfiles"
+    dotfiles:
+      - src: .zshrc
+        dest: ~/.zshrc
+      - src: .vimrc
+        dest: ~/.vimrc
+      - src: .i3
+        dest: ~/.config/i3/config
+      - src: .i3status
+        dest: ~/.config/i3status/config
+      - src: .ssh
+        dest: ~/.ssh/config
+      - src: .gitconfig
+        dest: ~/.gitconfig
+      - src: .Xresources
+        dest: ~/.Xresources
+
+  tasks:
+    - name: Ensure dotfiles directory exists
+      file:
+        path: "{{ dotfiles_dir }}"
+        state: directory
+        mode: '0755'
+
+    - name: Ensure parent directories for dotfiles exist
+      file:
+        path: "{{ item.dest | dirname }}"
+        state: directory
+        mode: '0755'
+      loop: "{{ dotfiles }}"
+      loop_control:
+        label: "{{ item.src }}"
+
+    - name: Create symlinks for dotfiles
+      loop: "{{ dotfiles }}"
+      loop_control:
+        label: "{{ item.src }}"
+      file:
+        src: "{{ dotfiles_dir }}/{{ item.src }}"
+        dest: "{{ item.dest }}"
+        state: link
+        force: yes
