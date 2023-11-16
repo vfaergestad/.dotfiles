@@ -151,9 +151,6 @@ workspace 8 output HDMI-A-0 primary
 workspace 9 output HDMI-A-0 primary
 workspace 10 output HDMI-A-0 primary
 
-
-workspace 6 output HDMI-A-0
-
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
