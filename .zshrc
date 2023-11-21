@@ -138,5 +138,3 @@ alias screen-right="xrandr --output HDMI-A-0 --right-of eDP"
 alias screen-above="xrandr --output HDMI-A-0 --above eDP"
 alias ts="tailscale"
 alias john=~/src/john/run/john
-
-setxkbmap -option caps:escape
