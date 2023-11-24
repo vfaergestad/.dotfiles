@@ -7,8 +7,6 @@
         dest: ~/.zshrc
       - src: .vimrc
         dest: ~/.vimrc
-      - src: .i3
-        dest: ~/.config/i3/config
       - src: .i3status
         dest: ~/.config/i3status/config
       - src: .ssh
@@ -17,6 +15,9 @@
         dest: ~/.gitconfig
       - src: .Xresources
         dest: ~/.Xresources
+    folders:
+      - src: i3
+        dest: ~/.config/
 
   tasks:
     - name: Ensure dotfiles directory exists
@@ -43,3 +44,21 @@
         dest: "{{ item.dest }}"
         state: link
         force: yes
+
+    - name: Ensure parent directories for folders exist
+      file:
+          path: "{{ item.dest }}"
+          state: directory
+          mode: '0755'
+      loop: "{{ folders }}"
+      loop_control:
+          label: "{{ item.src }}"
+
+    - name: Copy folders
+      loop: "{{ folders }}"
+      loop_control:
+          label: "{{ item.src }}"
+      copy:
+          src: "{{ dotfiles_dir }}/{{ item.src }}"
+          dest: "{{ item.dest }}"
+          force: yes
