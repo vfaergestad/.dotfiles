@@ -126,11 +126,9 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /home/vegard/.config/op/plugins.sh
 export PATH="$PATH:$HOME/.local/bin:/home/vegard/.local/share/JetBrains/Toolbox/scripts"
 
 
-eval $(thefuck --alias)
 alias wg-up="sudo wg-quick up wg0"
 alias wg-down="sudo wg-quick down wg0"
 alias screen-left="xrandr --output HDMI-A-0 --left-of eDP"
@@ -140,3 +138,4 @@ alias ts="tailscale"
 alias john=~/src/john/run/john
 
 setxkbmap -option caps:escape
+
