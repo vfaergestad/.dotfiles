@@ -1,0 +1,9 @@
+configuration {
+ modi: "window,drun,ssh,file-browser";
+ kb-cancel: "Escape,Alt+F1";
+ color-normal: "#2f343f, #2f343f, #2f343f, #2f343f, #2f343f";
+ color-urgent: "argb:00000000, #2f343f, argb:00000000, argb:00000000, #2f343f";
+ color-active: "argb:00000000, #49bbfb, argb:00000000, argb:00000000, #e29a49";
+ color-window: "#2f343f, #919ba0, #1c2023";
+ }
+@theme "/home/vegard/.config/rofi/theme.rasi"

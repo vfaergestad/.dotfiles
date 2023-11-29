@@ -20,6 +20,8 @@
     folders:
       - src: i3
         dest: ~/.config/
+      - src: rofi
+        dest: ~/.config/
 
   tasks:
     - name: Ensure dotfiles directory exists
