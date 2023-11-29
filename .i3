@@ -262,3 +262,6 @@ assign [class="discord"] $ws3
 
 # Sticky
 bindsym $mod+Shift+s sticky toggle
+
+## Start PICOM
+exec --no-startup-id picom
