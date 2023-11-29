@@ -55,10 +55,13 @@ bindsym $mod+l exec i3lock -c 000000 --ignore-empty-password
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -modi drun,run -show drun"
+bindsym $mod+d exec "rofi -modi drun,filebrowser,run -show-icons -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+# Rofi window switcher
+bindsym $mod+Tab exec "rofi -modi windowcd,window -show windowcd"
 
 # change focus
 #bindsym $mod+j focus left
