@@ -222,7 +222,7 @@ bar {
 }
 
 # PERSONAL KEYBINDINGS
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec nemo
 bindsym $mod+b exec vivaldi
 
 # colour of border, background, text, indicator, and child_border
