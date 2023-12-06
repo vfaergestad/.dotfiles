@@ -265,3 +265,6 @@ bindsym $mod+Shift+s sticky toggle
 
 ## Start PICOM
 exec --no-startup-id picom
+
+## Start 1password
+exec --no-startup-id 1password
