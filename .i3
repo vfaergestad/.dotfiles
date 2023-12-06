@@ -138,7 +138,7 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-workspace_layout tabbed
+#workspace_layout tabbed
 
 # Assign workspaces to primary monitor
 workspace 1 output primary
