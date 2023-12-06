@@ -1,0 +1,20 @@
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'navarasu/onedark.nvim'
+
+Plug 'tpope/vim-fugitive'
+
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+
+call plug#end()
+
+let g:onedark_config = {
+    \ 'style': 'dark',
+\}
+colorscheme onedark
+
+set relativenumber
+set number
+
+source ~/.config/nvim/myinit.lua
