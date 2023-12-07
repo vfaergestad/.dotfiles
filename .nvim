@@ -7,6 +7,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
+Plug 'nvim-lualine/lualine.nvim'
+
 call plug#end()
 
 let g:onedark_config = {

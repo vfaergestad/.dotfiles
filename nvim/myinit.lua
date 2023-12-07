@@ -23,3 +23,5 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+require('lualine').setup()
