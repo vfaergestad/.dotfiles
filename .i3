@@ -74,6 +74,9 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+bindsym F1 focus left
+bindsym F2 focus right
+
 
 # move focused window
 bindsym $mod+Shift+j move left
@@ -268,3 +271,6 @@ exec --no-startup-id picom
 
 ## Start 1password
 exec --no-startup-id 1password
+
+## Start CopyQ
+bindsym $mod+c exec copyq toggle
