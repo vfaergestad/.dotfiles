@@ -17,14 +17,10 @@
         dest: ~/.gitconfig
       - src: .Xresources
         dest: ~/.Xresources
-      - src: .nvim
-        dest: ~/.config/nvim/init.vim
     folders:
       - src: i3
         dest: ~/.config/
       - src: rofi
-        dest: ~/.config/
-      - src: nvim
         dest: ~/.config/
 
   tasks:
